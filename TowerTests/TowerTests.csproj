@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tower-of-Hanoi\Tower-of-Hanoi.csproj" />
+  </ItemGroup>
+
 </Project>

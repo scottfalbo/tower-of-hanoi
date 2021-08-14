@@ -6,19 +6,19 @@ namespace Tower_of_Hanoi
 {
     public class Tower
     {
-        public Pole[] Poles { get; set; }
+        public Poles[] Poles { get; set; }
 
         public Tower(int discs)
         {
-            Poles = new Pole[]
+            Poles = new Poles[]
                 { 
-                    new Pole(discs),
-                    new Pole(discs),
-                    new Pole(discs)
+                    new Poles(discs),
+                    new Poles(discs),
+                    new Poles(discs)
                 };
         }
 
-        public Pole[] SolveTowerArray(int discs) =>
+        public Poles[] SolveTowerArray(int discs) =>
             SolveArray(discs, Poles[0], Poles[2], Poles[1]);
 
 
@@ -26,13 +26,13 @@ namespace Tower_of_Hanoi
             SolvePrint(discs, Poles[0], Poles[2], Poles[1]);
 
 
-        public Pole[] SolveArray(int n, Pole startPole, Pole endPole, Pole centerPole)
+        public Poles[] SolveArray(int n, Poles startPole, Poles endPole, Poles centerPole)
         {
 
             return Poles;
         }
 
-        public void SolvePrint(int n, Pole startPole, Pole endPole, Pole centerPole)
+        public void SolvePrint(int n, Poles startPole, Poles endPole, Poles centerPole)
         {
 
         }
@@ -40,13 +40,22 @@ namespace Tower_of_Hanoi
 
     }
 
-    public class Pole
+    public class Poles
     {
-        public int[] Tower { get; set; }
+        public Discs[] Pole { get; set; }
 
-        public Pole(int discs)
+        public Poles(int discs)
         {
-            Tower = new int[discs];
+            Pole = new Discs[discs];
+        }
+    }
+
+    public class Discs
+    {
+        public string Disc { get; set; }
+        public Discs(string disc)
+        {
+            Disc = disc;
         }
     }
 
