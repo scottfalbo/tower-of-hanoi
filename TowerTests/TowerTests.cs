@@ -32,5 +32,14 @@ namespace TowerTests
             int actual = tower.Poles[0].Pole.Count;
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void CanSuccessfullySolveTheTowerOfHanoi()
+        {
+            Tower tower = new Tower();
+            string expected = "Disc-1";
+            string actual = tower.Poles[2].Pole.Peek().Disc;
+            Assert.Equal(expected, actual);
+        }
     }
 }
