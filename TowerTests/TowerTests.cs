@@ -48,6 +48,7 @@ namespace TowerTests
         public void CanSuccessfullySolveTheTowerOfHanoi()
         {
             Tower tower = new Tower();
+            tower.SolveTower();
             string expected = "Disc-1";
             string actual = tower.Poles[2].Pole.Peek().Disc;
             Assert.Equal(expected, actual);
@@ -58,6 +59,7 @@ namespace TowerTests
         {
             Tower tower = new Tower(8);
             // 2^n - 1 where n is the number of discs
+            tower.SolveTower();
             int expected = 255;
             int actual = tower.Moves;
             Assert.Equal(expected, actual);

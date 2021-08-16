@@ -77,7 +77,6 @@ namespace Tower_of_Hanoi
 
             Solve(n - 1, holder, to, from);
 
-            Console.WriteLine(Moves);
             return this;
         }
 
