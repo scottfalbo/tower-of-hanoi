@@ -6,7 +6,8 @@ namespace Tower_of_Hanoi
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Tower tower = new Tower(4);
+            Console.WriteLine(tower);
         }
     }
 }

@@ -8,6 +8,27 @@ namespace Tower_of_Hanoi
     {
         public Poles[] Poles { get; set; }
 
+        public int Moves = 0;
+
+        /// <summary>
+        /// Default constructor with 4 discs.
+        /// </summary>
+        public Tower() 
+        {
+            Poles = new Poles[]
+                {
+                    new Poles(4),
+                    new Poles(4),
+                    new Poles(4)
+                 };
+            for (int i = 4; i > 0; i--)
+                Poles[0].Pole.Push(new Discs($"Disc-{i}"));
+        }
+
+        /// <summary>
+        /// Constructor for user inputted number of discs.
+        /// </summary>
+        /// <param name="discs"> int: number of discs </param>
         public Tower(int discs)
         {
             Poles = new Poles[]
@@ -16,6 +37,8 @@ namespace Tower_of_Hanoi
                     new Poles(discs),
                     new Poles(discs)
                 };
+            for (int i = discs; i > 0; i--)
+                Poles[0].Pole.Push(new Discs($"Disc-{i}"));
         }
 
         public Poles[] SolveTowerArray(int discs) =>
@@ -42,11 +65,11 @@ namespace Tower_of_Hanoi
 
     public class Poles
     {
-        public Discs[] Pole { get; set; }
+        public Stack<Discs> Pole { get; set; }
 
         public Poles(int discs)
         {
-            Pole = new Discs[discs];
+            Pole = new Stack<Discs>();
         }
     }
 
