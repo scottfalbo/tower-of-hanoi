@@ -7,7 +7,7 @@ namespace Tower_of_Hanoi
         static void Main(string[] args)
         {
             Tower tower = new Tower(4);
-            var test = tower.SolveTower();
+            tower.SolveTower();
         }
     }
 }
